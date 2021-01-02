@@ -1,18 +1,22 @@
 input.onButtonPressed(Button.AB, function () {
-    if (Caminhada_normal <= 10) {
-        basic.showNumber(Caminhada_normal * 0.5)
+    basic.showNumber(0)
+    Caminhada_normal = 0
+    Corrida = 0
+})
+input.onButtonPressed(Button.B, function () {
+    if (Corrida <= 10) {
         basic.showString("Metros")
-    } else if (Caminhada_normal <= 100) {
-        basic.showNumber(Caminhada_normal / 10)
+    } else if (Corrida <= 100) {
+        basic.showNumber(Corrida / 10)
         basic.showString("Decametros")
-    } else if (Caminhada_normal <= 1000) {
-        basic.showNumber(Caminhada_normal / 100)
+    } else if (Corrida <= 1000) {
+        basic.showNumber(Corrida / 100)
         basic.showString("Hectometros")
-    } else if (Caminhada_normal <= 10000) {
-        basic.showNumber(Caminhada_normal / 1000)
+    } else if (Corrida <= 10000) {
+        basic.showNumber(Corrida / 1000)
         basic.showString("Quilometros")
     } else {
-        basic.showNumber(Caminhada_normal / 1000)
+        basic.showNumber(Corrida / 1000)
         basic.showString("Quilometros")
     }
     if (Meta_diária == 10000) {
@@ -30,19 +34,20 @@ input.onButtonPressed(Button.AB, function () {
         basic.clearScreen()
     }
 })
-input.onButtonPressed(Button.B, function () {
-    basic.showNumber(0)
-    Caminhada_normal = 0
-})
+let Corrida = 0
 let Meta_diária = 0
 let Caminhada_normal = 0
 basic.showNumber(0)
 Caminhada_normal = 0
+Meta_diária = Corrida
 Meta_diária = Caminhada_normal
+Corrida = 0
 basic.forever(function () {
     if (input.acceleration(Dimension.Strength) > 1500) {
         Caminhada_normal += 1
+        Corrida += 1
         basic.showNumber(Caminhada_normal)
+        basic.showNumber(Corrida)
         basic.pause(65)
         basic.clearScreen()
     }
