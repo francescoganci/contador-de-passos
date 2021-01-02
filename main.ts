@@ -37,7 +37,7 @@ input.onButtonPressed(Button.B, function () {
 let Meta_diária = 0
 let Caminhada_normal = 0
 basic.showNumber(0)
-Caminhada_normal = 10000
+Caminhada_normal = 0
 Meta_diária = Caminhada_normal
 basic.forever(function () {
     if (input.acceleration(Dimension.Strength) > 1500) {
