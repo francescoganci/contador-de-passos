@@ -1,33 +1,38 @@
 input.onButtonPressed(Button.A, function () {
-    if (Caminhada <= 10) {
-        basic.showNumber(Caminhada / 2)
-        basic.showString("Metros")
-    } else if (Caminhada <= 100) {
-        basic.showNumber(Caminhada / 20)
-        basic.showString("Decametros")
-    } else if (Caminhada <= 1000) {
-        basic.showNumber(Caminhada / 200)
-        basic.showString("Hectometros")
-    } else if (Caminhada <= 10000) {
-        basic.showNumber(Caminhada / 2000)
-        basic.showString("Quilometros")
-    } else {
-        basic.showNumber(Caminhada / 2000)
-        basic.showString("Quilometros")
-    }
-    if (Meta_diária == 10000) {
-        basic.showLeds(`
-            # # . # #
-            # # . # #
-            . . . . .
-            # . . . #
-            . # # # .
-            `)
-        basic.pause(100)
+    if (input.buttonIsPressed(Button.A)) {
+        basic.showString("Modo caminhada ATIVADO")
+        basic.pause(4000)
         basic.clearScreen()
-        basic.showString("Bateu a sua meta diária")
-        basic.pause(100)
-        basic.clearScreen()
+        if (Caminhada <= 10) {
+            basic.showNumber(Caminhada / 2)
+            basic.showString("Metros")
+        } else if (Caminhada <= 100) {
+            basic.showNumber(Caminhada / 20)
+            basic.showString("Decametros")
+        } else if (Caminhada <= 1000) {
+            basic.showNumber(Caminhada / 200)
+            basic.showString("Hectometros")
+        } else if (Caminhada <= 10000) {
+            basic.showNumber(Caminhada / 2000)
+            basic.showString("Quilometros")
+        } else {
+            basic.showNumber(Caminhada / 2000)
+            basic.showString("Quilometros")
+        }
+        if (Meta_diária == 10000) {
+            basic.showLeds(`
+                # # . # #
+                # # . # #
+                . . . . .
+                # . . . #
+                . # # # .
+                `)
+            basic.pause(100)
+            basic.clearScreen()
+            basic.showString("Bateu a sua meta diária")
+            basic.pause(100)
+            basic.clearScreen()
+        }
     }
 })
 input.onButtonPressed(Button.AB, function () {
@@ -74,13 +79,33 @@ Caminhada = 59
 Meta_diária = Corrida
 Meta_diária = Caminhada
 Corrida = 0
+if (input.buttonIsPressed(Button.A)) {
+    basic.showString("Escolha o modo a praticar")
+    basic.pause(4000)
+    basic.clearScreen()
+} else if (input.buttonIsPressed(Button.B)) {
+    basic.showString("Modo corrida ATIVADO")
+    basic.pause(4000)
+    basic.clearScreen()
+    Corrida += 1
+    basic.showNumber(Corrida)
+    basic.pause(65)
+    basic.clearScreen()
+}
 basic.forever(function () {
-    if (input.acceleration(Dimension.Strength) > 1500) {
-        Caminhada += 1
-        Corrida += 1
-        basic.showNumber(Caminhada)
-        basic.showNumber(Corrida)
-        basic.pause(65)
-        basic.clearScreen()
+    if (input.buttonIsPressed(Button.A)) {
+        if (input.acceleration(Dimension.Strength) > 1500) {
+            Caminhada += 1
+            basic.showNumber(Caminhada)
+            basic.pause(65)
+            basic.clearScreen()
+        }
+    } else if (input.buttonIsPressed(Button.B)) {
+        if (input.acceleration(Dimension.Strength) > 1500) {
+            Corrida += 1
+            basic.showNumber(Corrida)
+            basic.pause(65)
+            basic.clearScreen()
+        }
     }
 })
