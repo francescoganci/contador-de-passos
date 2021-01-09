@@ -1,12 +1,4 @@
 input.onButtonPressed(Button.A, function () {
-    basic.showString("Modo caminhada ATIVADO")
-    basic.pause(4000)
-    basic.clearScreen()
-    while (true) {
-        if (input.acceleration(Dimension.Strength) > 1500) {
-            Caminhada += 1
-        }
-    }
     if (Caminhada <= 10) {
         basic.showNumber(Caminhada / 2)
         basic.showString("M")
@@ -149,3 +141,10 @@ if (input.buttonIsPressed(Button.A)) {
         }
     }
 }
+basic.forever(function () {
+    while (true) {
+        if (input.acceleration(Dimension.Strength) > 1500) {
+            Caminhada += 1
+        }
+    }
+})
