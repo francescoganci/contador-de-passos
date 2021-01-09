@@ -7,6 +7,38 @@ input.onButtonPressed(Button.A, function () {
             Caminhada += 1
         }
     }
+    if (Caminhada <= 10) {
+        basic.showNumber(Caminhada / 2)
+        basic.showString("M")
+    } else if (Caminhada <= 100) {
+        basic.showNumber(Caminhada / 20)
+        basic.showString("Dam")
+    } else if (Caminhada <= 1000) {
+        basic.showNumber(Caminhada / 200)
+        basic.showString("Hm")
+    } else if (Caminhada <= 10000) {
+        basic.showNumber(Caminhada / 2000)
+        basic.showString("Km")
+    } else {
+        basic.showNumber(Caminhada / 2000)
+        basic.showString("Km")
+    }
+    if (Meta_diária == 10000) {
+        basic.showLeds(`
+            # # . # #
+            # # . # #
+            . . . . .
+            # . . . #
+            . # # # .
+            `)
+        basic.pause(100)
+        basic.clearScreen()
+        basic.showString("Bateu a sua meta diária")
+        basic.pause(100)
+        basic.clearScreen()
+    }
+    basic.pause(65)
+    basic.clearScreen()
 })
 input.onButtonPressed(Button.AB, function () {
     basic.showNumber(Caminhada)
