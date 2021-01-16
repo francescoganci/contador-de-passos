@@ -9,27 +9,27 @@ input.onButtonPressed(Button.A, function () {
         if (Caminhada <= 10) {
             basic.showNumber(Caminhada / 2)
             basic.showString("M")
-            basic.pause(2000)
+            basic.pause(1000)
             basic.clearScreen()
         } else if (Caminhada <= 100) {
             basic.showNumber(Caminhada / 20)
             basic.showString("Dam")
-            basic.pause(2000)
+            basic.pause(1000)
             basic.clearScreen()
         } else if (Caminhada <= 1000) {
             basic.showNumber(Caminhada / 200)
             basic.showString("Hm")
-            basic.pause(2000)
+            basic.pause(1000)
             basic.clearScreen()
         } else if (Caminhada <= 10000) {
             basic.showNumber(Caminhada / 2000)
             basic.showString("Km")
-            basic.pause(2000)
+            basic.pause(1000)
             basic.clearScreen()
         } else {
             basic.showNumber(Caminhada / 2000)
             basic.showString("Km")
-            basic.pause(2000)
+            basic.pause(1000)
             basic.clearScreen()
         }
         if (Meta_diária == 10000) {
@@ -48,9 +48,6 @@ input.onButtonPressed(Button.A, function () {
         }
     }
 })
-input.onButtonPressed(Button.AB, function () {
-	
-})
 input.onButtonPressed(Button.B, function () {
     basic.showString("Modo corrida ATIVADO")
     basic.pause(4000)
@@ -62,27 +59,27 @@ input.onButtonPressed(Button.B, function () {
         if (Corrida <= 10) {
             basic.showNumber(Corrida / 1)
             basic.showString("M")
-            basic.pause(2000)
+            basic.pause(1000)
             basic.clearScreen()
         } else if (Corrida <= 100) {
             basic.showNumber(Corrida / 10)
             basic.showString("Dam")
-            basic.pause(2000)
+            basic.pause(1000)
             basic.clearScreen()
         } else if (Corrida <= 1000) {
             basic.showNumber(Corrida / 100)
             basic.showString("Hm")
-            basic.pause(2000)
+            basic.pause(1000)
             basic.clearScreen()
         } else if (Corrida <= 10000) {
             basic.showNumber(Corrida / 1000)
             basic.showString("Km")
-            basic.pause(2000)
+            basic.pause(1000)
             basic.clearScreen()
         } else {
             basic.showNumber(Corrida / 1000)
             basic.showString("Km")
-            basic.pause(2000)
+            basic.pause(1000)
             basic.clearScreen()
         }
         if (Meta_diária == 10000) {
@@ -119,9 +116,6 @@ if (input.buttonIsPressed(Button.A)) {
     basic.pause(4000)
     basic.clearScreen()
 }
-basic.forever(function () {
-	
-})
 basic.forever(function () {
 	
 })
