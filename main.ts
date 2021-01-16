@@ -101,6 +101,7 @@ input.onButtonPressed(Button.B, function () {
 let Corrida = 0
 let Meta_diária = 0
 let Caminhada = 0
+basic.showString("Escolha a modalidade a praticar")
 basic.pause(4000)
 basic.clearScreen()
 if (input.buttonIsPressed(Button.A)) {
