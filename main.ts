@@ -4,9 +4,9 @@ input.onButtonPressed(Button.A, function () {
     basic.clearScreen()
     basic.showLeds(`
         . # # . .
-        . . . # .
+        # . . # .
         . . # # .
-        . . . # .
+        # . . # .
         . # # . .
         `)
     basic.pause(1000)
@@ -30,7 +30,7 @@ input.onButtonPressed(Button.A, function () {
     basic.pause(1000)
     basic.clearScreen()
     basic.showString("START")
-    basic.pause(2000)
+    basic.pause(1000)
     basic.clearScreen()
     while (true) {
         if (input.acceleration(Dimension.Strength) > 1500) {
@@ -84,9 +84,9 @@ input.onButtonPressed(Button.B, function () {
     basic.clearScreen()
     basic.showLeds(`
         . # # . .
-        . . . # .
+        # . . # .
         . . # # .
-        . . . # .
+        # . . # .
         . # # . .
         `)
     basic.pause(1000)
@@ -110,7 +110,7 @@ input.onButtonPressed(Button.B, function () {
     basic.pause(1000)
     basic.clearScreen()
     basic.showString("START")
-    basic.pause(2000)
+    basic.pause(1000)
     basic.clearScreen()
     while (true) {
         if (input.acceleration(Dimension.Strength) > 1500) {
