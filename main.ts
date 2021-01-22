@@ -1,6 +1,6 @@
 input.onButtonPressed(Button.A, function () {
     basic.showString("Modo caminhada ATIVADO")
-    basic.pause(4000)
+    basic.pause(2000)
     basic.clearScreen()
     basic.showLeds(`
         . # # . .
@@ -9,7 +9,7 @@ input.onButtonPressed(Button.A, function () {
         . . . # .
         . # # . .
         `)
-    basic.pause(4000)
+    basic.pause(1000)
     basic.clearScreen()
     basic.showLeds(`
         . # # . .
@@ -18,7 +18,7 @@ input.onButtonPressed(Button.A, function () {
         . # . . .
         # # # # .
         `)
-    basic.pause(4000)
+    basic.pause(1000)
     basic.clearScreen()
     basic.showLeds(`
         . . # . .
@@ -27,10 +27,10 @@ input.onButtonPressed(Button.A, function () {
         . . # . .
         . . # . .
         `)
-    basic.pause(4000)
+    basic.pause(1000)
     basic.clearScreen()
     basic.showString("START")
-    basic.pause(4000)
+    basic.pause(2000)
     basic.clearScreen()
     while (true) {
         if (input.acceleration(Dimension.Strength) > 1500) {
@@ -80,7 +80,7 @@ input.onButtonPressed(Button.A, function () {
 })
 input.onButtonPressed(Button.B, function () {
     basic.showString("Modo corrida ATIVADO")
-    basic.pause(4000)
+    basic.pause(2000)
     basic.clearScreen()
     basic.showLeds(`
         . # # . .
@@ -89,7 +89,7 @@ input.onButtonPressed(Button.B, function () {
         . . . # .
         . # # . .
         `)
-    basic.pause(4000)
+    basic.pause(1000)
     basic.clearScreen()
     basic.showLeds(`
         . # # . .
@@ -98,7 +98,7 @@ input.onButtonPressed(Button.B, function () {
         . # . . .
         # # # # .
         `)
-    basic.pause(4000)
+    basic.pause(1000)
     basic.clearScreen()
     basic.showLeds(`
         . . # . .
@@ -107,10 +107,10 @@ input.onButtonPressed(Button.B, function () {
         . . # . .
         . . # . .
         `)
-    basic.pause(4000)
+    basic.pause(1000)
     basic.clearScreen()
     basic.showString("START")
-    basic.pause(4000)
+    basic.pause(2000)
     basic.clearScreen()
     while (true) {
         if (input.acceleration(Dimension.Strength) > 1500) {
@@ -174,7 +174,7 @@ basic.showLeds(`
 basic.pause(2000)
 basic.clearScreen()
 basic.showString("Caminhada")
-basic.pause(2000)
+basic.pause(1000)
 basic.clearScreen()
 basic.showLeds(`
     . . # . .
@@ -201,6 +201,3 @@ if (input.buttonIsPressed(Button.A)) {
     basic.pause(4000)
     basic.clearScreen()
 }
-basic.forever(function () {
-	
-})
