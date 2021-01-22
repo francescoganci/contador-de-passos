@@ -2,6 +2,36 @@ input.onButtonPressed(Button.A, function () {
     basic.showString("Modo caminhada ATIVADO")
     basic.pause(4000)
     basic.clearScreen()
+    basic.showLeds(`
+        . # # . .
+        . . . # .
+        . . # # .
+        . . . # .
+        . # # . .
+        `)
+    basic.pause(4000)
+    basic.clearScreen()
+    basic.showLeds(`
+        . # # . .
+        # . . # .
+        . . # . .
+        . # . . .
+        # # # # .
+        `)
+    basic.pause(4000)
+    basic.clearScreen()
+    basic.showLeds(`
+        . . # . .
+        . # # . .
+        . . # . .
+        . . # . .
+        . . # . .
+        `)
+    basic.pause(4000)
+    basic.clearScreen()
+    basic.showString("START")
+    basic.pause(4000)
+    basic.clearScreen()
     while (true) {
         if (input.acceleration(Dimension.Strength) > 1500) {
             Caminhada += 1
@@ -50,6 +80,36 @@ input.onButtonPressed(Button.A, function () {
 })
 input.onButtonPressed(Button.B, function () {
     basic.showString("Modo corrida ATIVADO")
+    basic.pause(4000)
+    basic.clearScreen()
+    basic.showLeds(`
+        . # # . .
+        . . . # .
+        . . # # .
+        . . . # .
+        . # # . .
+        `)
+    basic.pause(4000)
+    basic.clearScreen()
+    basic.showLeds(`
+        . # # . .
+        # . . # .
+        . . # . .
+        . # . . .
+        # # # # .
+        `)
+    basic.pause(4000)
+    basic.clearScreen()
+    basic.showLeds(`
+        . . # . .
+        . # # . .
+        . . # . .
+        . . # . .
+        . . # . .
+        `)
+    basic.pause(4000)
+    basic.clearScreen()
+    basic.showString("START")
     basic.pause(4000)
     basic.clearScreen()
     while (true) {
@@ -102,7 +162,31 @@ let Corrida = 0
 let Meta_diária = 0
 let Caminhada = 0
 basic.showString("Escolha a modalidade a praticar")
-basic.pause(4000)
+basic.pause(2000)
+basic.clearScreen()
+basic.showLeds(`
+    . . # . .
+    . # . . .
+    # # # # #
+    . # . . .
+    . . # . .
+    `)
+basic.pause(2000)
+basic.clearScreen()
+basic.showString("Caminhada")
+basic.pause(2000)
+basic.clearScreen()
+basic.showLeds(`
+    . . # . .
+    . . . # .
+    # # # # #
+    . . . # .
+    . . # . .
+    `)
+basic.pause(2000)
+basic.clearScreen()
+basic.showString("Corrida")
+basic.pause(2000)
 basic.clearScreen()
 if (input.buttonIsPressed(Button.A)) {
     Caminhada = 0
